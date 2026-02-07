@@ -17,7 +17,7 @@
   <button onclick="mostrar()">Entrar</button>
 
   <p id="resultado"></p>
-  <p> Hola amor, gracias por dejarme jugar hoy</p>
+  <p id="saludo"></p>
   
 
   <script>
@@ -32,6 +32,7 @@
 
       if (nombre === "BLAS" && clave === "17/10/2025") {
         document.getElementById("resultado").innerText = mensaje;
+        document.getElementById("saludo").innerHTML = " Hola amor, gracias por dejarme jugar hoy";
       } else {
         document.getElementById("resultado").innerText = "Acceso denegado ";
       }
