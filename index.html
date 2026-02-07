@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mensaje secreto</title>
+</head>
+<body>
+  <h2>Acceso</h2>
+
+  <p>Nombre:</p>
+  <input id="nombre" type="text" placeholder="Tu nombre..." />
+
+  <p>Contraseña:</p>
+  <input id="clave" type="password" placeholder="Contraseña..." />
+
+  <br><br>
+  <button onclick="mostrar()">Entrar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function mostrar() {
+      let nombre = document.getElementById("nombre").value;
+      let clave = document.getElementById("clave").value;
+
+      nombre = nombre.toUpperCase().trim();
+      clave = clave.trim();
+
+      const mensaje = "01101000 01101111 01101100 01100001 00100000 01100001 01101101 01101111 01110010 00100000 01101010 01101001 01101010 01101001";
+
+      if (nombre === "BLAS" && clave === "17/10/2025") {
+        document.getElementById("resultado").innerText = mensaje;
+      } else {
+        document.getElementById("resultado").innerText = "Acceso denegado ";
+      }
+    }
+  </script>
+</body>
+</html>
