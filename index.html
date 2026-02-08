@@ -3,6 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mensaje secreto</title>
+<style>
+  body {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+</style>
+
 </head>
 <body>
   <h2>Acceso</h2>
@@ -24,7 +33,7 @@
   <button onclick="hacerJugo()">Hacer jugo</button>
   <p id="resultadoJugo"></p>
 </div>
-  <div id="imagen"></div>
+
 
 
   
@@ -42,9 +51,9 @@
       if (nombre === "BLAS" && clave === "17/10/2025") {
         document.getElementById("resultado").innerText = mensaje;
         document.getElementById("saludo").innerText = " Hola amor, gracias por dejarme jugar hoy";
-        
+        document.body.style.backgroundImage = "url('img/mensajesecreto.jpg')";
         document.getElementById("juguera").style.display = "block";
-        document.getElementById("imagen").innerHTML = '<img src="./mensajesecreto.jpg" width="600">';
+        
         
         
       } else {
