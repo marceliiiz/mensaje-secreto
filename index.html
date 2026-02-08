@@ -19,6 +19,25 @@
   <p id="resultado"></p>
   <p id="saludo"></p>
   <div id="imagen"></div>
+  <div id="juguera" style="display:none; margin-top:30px;">
+  <h2>🍹 Amor, preparate un jugo sorpresa </h2>
+
+  <p>Ingresa 6 frutas:</p>
+
+  <input id="f1" placeholder="Fruta 1"><br><br>
+  <input id="f2" placeholder="Fruta 2"><br><br>
+  <input id="f3" placeholder="Fruta 3"><br><br>
+  <input id="f4" placeholder="Fruta 4"><br><br>
+  <input id="f5" placeholder="Fruta 5"><br><br>
+  <input id="f6" placeholder="Fruta 6"><br><br>
+
+  <button type="button" onclick="hacerJugo()">Hacer jugo</button>
+
+  <p id="resultadoJugo"></p>
+</div>
+
+
+
 
 
   
@@ -37,12 +56,38 @@
         document.getElementById("resultado").innerText = mensaje;
         document.getElementById("saludo").innerText = " Hola amor, gracias por dejarme jugar hoy";
         document.getElementById("imagen").innerHTML = '<img src="./mensajesecreto.jpg" width="600">';
+        document.getElementById("juguera").style.display = "block";
+
         
         
       } else {
         document.getElementById("resultado").innerText = "Acceso denegado ";
       }
     }
+    function hacerJugo() {
+    let frutas = [
+      document.getElementById("f1").value,
+      document.getElementById("f2").value,
+      document.getElementById("f3").value,
+      document.getElementById("f4").value,
+      document.getElementById("f5").value,
+      document.getElementById("f6").value,
+    ];
+
+    frutas = frutas.map((f) => f.trim()).filter((f) => f !== "");
+
+    if (frutas.length < 6) {
+      document.getElementById("resultadoJugo").innerText =
+        "Debes ingresar las 6 frutas 🙂";
+      return;
+    }
+
+    frutas.sort(() => Math.random() - 0.5);
+    let jugo = frutas.slice(0, 3);
+
+    document.getElementById("resultadoJugo").innerText =
+      "🍹 El jugo se hizo con: " + jugo.join(", ");
+  }
   </script>
 </body>
 </html>
