@@ -3,14 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>Mensaje secreto</title>
-<style>
-    body {
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-  </style>
 
 </head>
 <body>
@@ -26,13 +18,7 @@
   <button onclick="mostrar()">Entrar</button>
 
  
-  <p id="saludo"></p>
   
-  <div id="juguera" style="display:none;">
-  <h3>🍹 Jugo sorpresa</h3>
-  <button onclick="hacerJugo()">Hacer jugo</button>
-  <p id="resultadoJugo"></p>
-</div>
 
 
 
@@ -49,12 +35,7 @@
     
 
       if (nombre === "BLAS" && clave === "17/10/2025") {
-        document.getElementById("saludo").innerText = " Hola amor, gracias por dejarme jugar hoy";
-        document.getElementById("juguera").style.display = "block";
-        document.body.style.backgroundImage = "url('./img/mensajesecreto.jpg')";
-        document.body.style.backgroundSize = "cover";
-        document.body.style.backgroundPosition = "center";
-        document.body.style.backgroundRepeat = "no-repeat";
+         window.location.href = "secreto.html";
 
         
         
@@ -63,14 +44,7 @@
         document.getElementById("resultado").innerText = "Acceso denegado ";
       }
     }
-    function hacerJugo() {
-    const frutas = ["Manzana", "Plátano", "Frutilla", "Mango", "Piña", "Naranja"];
-
-    const frutaRandom = frutas[Math.floor(Math.random() * frutas.length)];
-
-    document.getElementById("resultadoJugo").innerText =
-      "✨ Tu jugo sorpresa es de: " + frutaRandom + " 🍹";
-  }
+    
   </script>
 </body>
 </html>
