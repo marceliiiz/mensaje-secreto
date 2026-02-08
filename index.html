@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <title>Mensaje secreto</title>
 <style>
-  body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-  }
-</style>
+    body {
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+  </style>
 
 </head>
 <body>
@@ -50,8 +50,12 @@
 
       if (nombre === "BLAS" && clave === "17/10/2025") {
         document.getElementById("saludo").innerText = " Hola amor, gracias por dejarme jugar hoy";
-        document.body.style.backgroundImage = "url('img/mensajesecreto.jpg')";
         document.getElementById("juguera").style.display = "block";
+        document.body.style.backgroundImage = "url('./img/mensajesecreto.jpg')";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundRepeat = "no-repeat";
+
         
         
         
