@@ -2,8 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Mensaje secreto</title>
-
+  <title>Acceso</title>
 </head>
 <body>
   <h2>Acceso</h2>
@@ -17,12 +16,7 @@
   <br><br>
   <button onclick="mostrar()">Entrar</button>
 
- 
-  
-
-
-
-  
+  <p id="resultado"></p>
 
   <script>
     function mostrar() {
@@ -32,19 +26,18 @@
       nombre = nombre.toUpperCase().trim();
       clave = clave.trim();
 
-    
-
       if (nombre === "BLAS" && clave === "17/10/2025") {
-         window.location.href = "secreto.html";
 
-        
-        
-        
+        // Guardamos que sí pasó la autenticación
+        localStorage.setItem("acceso_ok", "true");
+
+        // Redirigir a la página secreta
+        window.location.href = "secreto.html";
+
       } else {
-        document.getElementById("resultado").innerText = "Acceso denegado ";
+        document.getElementById("resultado").innerText = "Acceso denegado ❌";
       }
     }
-    
   </script>
 </body>
 </html>
