@@ -18,7 +18,8 @@
 
   <p id="resultado"></p>
   <p id="saludo"></p>
-  <div id="imagen"></div>
+  <p id="imagen"></p>
+
 
   
 
@@ -35,7 +36,8 @@
       if (nombre === "BLAS" && clave === "17/10/2025") {
         document.getElementById("resultado").innerText = mensaje;
         document.getElementById("saludo").innerText = " Hola amor, gracias por dejarme jugar hoy";
-        document.getElementById("imagen").innerHtml = "<img src='./mensajesecreto.jpg'>";
+        document.getElementById("imagen").innerHtml = '<img src="img/mensajesecreto.jpg" width="200">';
+        
         
       } else {
         document.getElementById("resultado").innerText = "Acceso denegado ";
